@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Документ без названия</title>
+</head>
+<!-- Код ДС может быть добавлен в качестве аттрибута некоторого события -->
+<!--Событие имеет отношение к тому тэгу в котором прописан его аттрибут.-->
+<body >
+
+<!--onclick - клик левой кнопки мыши
+ondblclick - двойной клик левой кнопки мыши
+onchange - изменение значения в поле элемента формы
+onfocus - событие фокусировки на элементе формы
+onblur - противоположное соытие onfocus
+onload - загрузка страницы в окно браузера, а так же событие вебстраницы-->
+
+<!--<div id = "header"><p>Menu</p></div>
+<div id = "content">Content</div>
+<div id = "footer">Footer</div>-->
+
+
+<!--<div class = "header"><p>Menu</p></div>
+<div class = "content">
+<h1>Content</h1>
+<p>Lorem Ipsum is <a href="" class = "my-link">survived</a> simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing <a href="" class = "my-link">centuries</a> software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+</div>
+<div class = "footer">Footer</div>-->
+
+<div id = "some-block">Hallochen!!!</div>
+<div>Text1</div>
+<div>Text22222</div>
+<div>Text33333</div>
+
+<p onClick="this.innerHTML = 'Fick dich ins Knee!!!';">Halloechen Suesse ;-)</p>
+<p onClick="if(this != 'Fick dich ins Knee111!!!'){this.innerHTML = 'Fick dich ins Knee111!!!';}else{this.innerHTML = 'Halloechen Suesse111;'}">Halloechen Suesse111 ;-)</p>
+
+<p onClick="this != 'Fick dich ins Knee222!!!' ? this.innerHTML = 'Fick dich ins Knee222!!!' : this.innerHTML = 'Halloechen Suesse222;'">Halloechen Suesse222 ;-)</p>
+
+<p id = "hallo-block" onClick="changeCurrent(el_3);">Halloechen Suesse111 ;-)</p>
+<a href="https://www.google.com.ua/" id = "test-link"> Google </a>
+
+
+<input type="button" value="Change 1" onclick="changeSingle(el_1);">
+<input type="button" value="Change 2" onClick="changeCollection(el_2);">
+
+<div id="block-1">block-#1</div>
+<div id="block-2">block-#2</div>
+
+<input type="button" value="add" onClick="test();">
+<input type="button" value="remove" onClick="test_rem();">
+
+
+
+
+<!--<script src="script_2.js"></script>-->
+<!--<script src="script_4.js"></script>-->
+<script src="script_5.js"></script>
+</body>
+</html>

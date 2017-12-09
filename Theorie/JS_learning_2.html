@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Документ без названия</title>
+</head>
+<!-- Код ДС может быть добавлен в качестве аттрибута некоторого события -->
+<!--Событие имеет отношение к тому тэгу в котором прописан его аттрибут.-->
+<body onLoad="console.log('Loaded');" ><!-- Выводим в консоле наше сообщение лоадед -->
+<!-- Выводим сообщение при клике на этот блок: --><div onClick="alert('Loaded');">Click</div>
+<!-- Выводим сообщение при двойном клике на этот параграф: --><p onDblClick="alert('Double Click baby! :-) ');">Click me twice!!!</p>
+
+
+<form onsubmit = "return confirm(Submit?);">
+  <input type = "text"
+  onFocus="x = 1, console.log(x);"
+  onBlur="x=0, console.log(x);"
+  > <!-- Выведет в консоле при нажатии мышкой в поле ввода - 1, и при нажатии на другое место на сайте и деактивации поля ввода соответственно ноль - 0  -->
+  <input type="submit"><!-- При нажатии сабмит, появится модальное окно с прозьбой подвтердить событи и надписью: Submit? -->
+</form>
+
+<!--onclick - клик левой кнопки мыши
+ondblclick - двойной клик левой кнопки мыши
+onchange - изменение значения в поле элемента формы
+onfocus - событие фокусировки на элементе формы
+onblur - противоположное соытие onfocus
+onload - загрузка страницы в окно браузера, а так же событие вебстраницы-->
+
+<div id = "header"><p>Menu</p></div>
+<div id = "content">Content</div>
+<div id = "footer">Footer</div>
+
+
+<script src="script_2.js"></script>
+</body>
+</html>

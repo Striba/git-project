@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Практика ДжаваСкрипт</title>
+<!--<link rel="stylesheet" href="style.css?<?=filemtime( 'style.css' )?>">-->
+<link rel="stylesheet" href="style1.css?<?=filemtime( 'style1.css' )?>" >
+</head>
+<body>
+
+
+
+<input type="checkbox" id="one" onChange="fun1();">
+
+<input type="radio" name="r1" value="5"> 0
+<input type="radio" name="r1" value="53"> 1
+<input type="radio" name="r1" value="535"> 2
+
+<button onClick = "fun2()">Click me</button>
+
+
+<select name="" id="mySelect" onChange="fun3()">
+  <option value="">Яблоко</option>
+  <option value="">Груша</option>
+  <option value="">Апельсин</option>
+  <option value="">Капуста</option>
+</select>
+
+<input type="range" min="0" max="100" step="1" oninput="fun4()" id="r1">
+	<p id="two"></p>
+    
+<input type="range" min="0" max="100" step="2" oninput="fun5()" id="r2">
+  <input type="text" id="three">
+    
+ <input type="range" min="0" max="100" step="2" oninput="fun6()" id="r3">
+	<div id="test"></div>
+    
+    
+<div class="block1">
+	<p>Верхний левый угол:
+    <input type="range" id="rtl" min="0" max="100" value="0" oninput="fun_generetor()">
+    <input type="text" id="ttl" value="0">
+    </p>
+    <p>Верхний правый угол:
+    <input type="range" id="rtr"  min="0" max="100" value="0" oninput="fun_generetor()">
+    <input type="text" id="ttr" value="0">
+    </p>
+    <p>Нижний правый угол:
+    <input type="range" id="rbr"  min="0" max="100" value="0" oninput="fun_generetor()">
+    <input type="text" id="tbr" value="0">
+    </p>
+    <p>Нижний левый угол:
+    <input type="range" id="rbl"  min="0" max="100" value="0" oninput="fun_generetor()">
+    <input type="text" id="tbl" value="0">
+    </p>
+</div>
+<div id="block"></div>
+
+
+
+<!--Выпадающее меню: -->
+
+
+<div id="nav">
+  <div class="menu-item">
+  Меню 1
+    <div class="submenu"> 
+    Подменю
+    </div>
+  </div>
+  <div class="menu-item">
+  Меню 2
+    <div class="submenu">
+    Подменю 
+    </div>
+  </div>
+  <div class="menu-item">
+  Меню 3
+    <div class="submenu"> 
+    Подменю
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Практика: Урок 5: Делаем вкладки - табы.   -->
+<div id = "tabs"><!-- Обертка -->
+  <div class = "tab whiteborder">Tab 1</div><!--Заголовки вкладок по которым клик мышью--><!-- с пробелом, т.к. первый это надкласс подследующего класса котороый уже через пробел написан, и т.д.!!! -->
+  <div class = "tab">Tab 2</div>
+  <div class = "tab">Tab 3</div>
+  <div class = "tabContent">1</div><!-- Содержимое вкладок -->
+  <div class = "tabContent">2</div>
+  <div class = "tabContent">3</div>
+</div>
+
+<!-- Практика: Урок 6: Создаем модальные окна: -->
+
+<button id="myBtn">Modal Oeffnen</button>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+    <span class="close">&times;</span><!--Делает крестик, на который закрывать надо: X -->
+    <p>Modalfenster</p>
+    </div>
+</div>
+
+<!-- Практика: Урок 7: Анимация: -->
+<button onclick = 'myMove()'>Animation</button>
+<div id="myContainer">
+	<div id="myAnimation">
+    </div>
+</div>
+
+<!-- Практика: Урок 8: Как сделать слайдер (Carousel) -->
+<div class="slideshow-container">
+	<div class="mySlides fade">
+    	<div class="numbertext">1/3</div>
+        <img src="img/demon1.jpg" style="width: 100%" alt="тута картинка 1"><!--  style="width: 100%" здан в этом месте, т.к. тут степень приоритета самая высокая -->
+        <!-- Атрибут alt устанавливает альтернативный текст для изображений. Такой текст позволяет получить текстовую информацию о рисунке при отключенной в браузере загрузке изображений. Поскольку загрузка изображений происходит после получения браузером информации о нем, то замещающий рисунок текст появляется раньше. А уже по мере загрузки текст будет сменяться изображением. -->
+        <div class="text">Text</div>
+    </div>
+    
+    <div class="mySlides fade">    
+        <div class="numbertext">2/3</div>
+        <img src="img/demon2.jpg" style="width: 100%" alt="тута картинка 2">
+        <div class="text">Text</div>
+    </div>
+     
+    <div class="mySlides fade"> 
+        <div class="numbertext">3/3</div>
+        <img src="img/demon3.jpg" style="width: 100%" alt="тута картинка 3">
+        <div class="text">Text</div>
+    </div><!--fade - называют эффект перехода между фотографиями-->
+    
+    <a onclick = "plusSlides(-1)" class="prev" >&#10094</a> <!-- Не нашел пока обозначения этих спецсимволов -->
+	<a onclick = "plusSlides(1)" class="next">&#10095</a>
+
+</div>
+<br>
+
+<div style="text-align: center;">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+
+</div>
+
+<!-- Lesson 9:Как сделать фильтрацию на сайт.  -->
+
+<input type="text" onkeyup = "myFunction()" id="myInput" placeholder="Search for Names"><!-- Событие onkeyup возникает в момент отпускания нажатой клавиши. -->
+	<ul id="myUl"><!--Тег <li> определяет отдельный элемент списка. Внешний тег <ul> или <ol> устанавливает тип списка — маркированный или нумерованный.-->
+		<li><a href="" class="header">A</a></li>
+          <li><a href="" >Anton</a></li>
+          <li><a href="" >Andrey</a></li>
+        
+        <li><a href="" class="header">B</a></li>
+          <li><a href="" >Bogdan</a></li>
+          <li><a href="" >Bill</a></li>
+          <li><a href="" >Boris</a></li>
+          
+        <li><a href="" class="header">C</a></li>
+          <li><a href="" >Conang</a></li>
+          <li><a href="" >Chriss</a></li>
+          <li><a href="" >Caroline</a></li>
+          
+	</ul>
+
+<!-- Lesson 10: Делаем калькулятор.  -->
+
+<div id="calcul">
+	<fieldset id="zifferWrapper">Введите числа в калькулятор: 
+      <p>Число 1: <input type="text" class="ziffer" id="n1"></p>
+      <p>Число 2: <input type="text" class="ziffer" id="n2"></p>
+	</fieldset>
+
+	<button onClick="plus()" class="calcBtns">+</button>
+    <button onClick="minus()" class="calcBtns">-</button>
+    
+    <hr>
+    
+    <p id="out">Ответ: </p>
+    
+</div>
+
+
+<!-- Lesson 11: Как работать с API. -->
+<div id="map" style="width: 1200px; height:400px;"></div>
+
+
+<!--  Lesson 12: Модальные изображения. -->
+<img src="img/croatia-dubrovnik-sunset.jpg" alt="croatia dubrovnik sunset" id="myImg" width="300" height="200">
+<div id="myModalka" class="modalik">
+	<span class="close" onClick="document.getElementById('myModalka').style.display='none'">&times;</span><!-- получаем спан блок с крестиком -->
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+
+<!--  Lesson 13: Прогресс бар. Как управлять. -->
+<div id="myProgress">
+  <div id="myBar">
+    <div id="label">10%
+    </div>
+  </div>
+</div>
+<button onclick="move()">Click me please</button>
+
+<!-- Lesson 14: Как сделать Popup. -->
+<div class="popup" onClick="myFunctionPop()">Click here baby!
+  <span class="popuptext" id="myPopup">Many desktop publishing packages and web page editors now use Lorem Ipsum</span>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="script_pr.js"></script>
+<script src="script_pr_1.js"></script>
+<script src="script_pr_2.js?<?=filemtime( 'script_pr_2.js' )?>"></script>
+<!--<script src="script_pr_2.js"></script>-->
+<script src="script_pr_3.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD2UoTlHQ453DonFXOcO8wSVMgB0abTeU&callback=initMap"
+    async defer></script>
+</body>
+</html>
