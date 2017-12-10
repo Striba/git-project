@@ -7,7 +7,7 @@
 </head>
 <body >
 
-
+<?php //Hi GIT?>
 
 <input type="checkbox" id="one" onChange="fun1();">
 
