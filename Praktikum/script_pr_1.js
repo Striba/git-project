@@ -1,5 +1,8 @@
 //Hi GIT
 
+////Lesson 12 Train Brain JS
+
+
 //Ф-я выводит выбранный элемент оптиона.
 function fun3(){
 	var sel = document.getElementById('mySelect').selectedIndex;//Выбирает индекс заданного элемента
